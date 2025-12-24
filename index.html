@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Netflix Style</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body class="fade-in" onload="protegerPagina(); animarEntrada(); setTimeout(sonidoNetflixSuave, 300);">
+
+<header class="nav">
+    <h1 class="logo">ANITZA CORONEL SAJAMI</h1>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+</header>
+
+<section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="VIDEO/IMG_9973.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+    </video>
+
+    <div class="hero-content">
+        <h2>Mis Recuerdos</h2>
+        <p>Galería privada</p>
+    </div>
+</section>
+
+
+<section class="row">
+    <h3>Mis Fotos</h3>
+    <div class="row-posters">
+        <img src="FOTOS/IMG_9077.jpg" onclick="abrirModal(this)" data-desc="Dias saliendo con tigo Amor mio">
+        <img src="FOTOS/IMG_9397.jpg" onclick="abrirModal(this)" data-desc="Un momento de tristesa que te alegre la vida">
+        <img src="FOTOS/IMG_9527.jpg" onclick="abrirModal(this)" data-desc="Un momento inolvidable encendidos de luces">
+        <img src="FOTOS/IMG_9658.jpg" onclick="abrirModal(this)" data-desc="ahora somos 3 tu y yo y toby">
+    </div>
+    <!-- MODAL -->
+<div id="modal" class="modal" onclick="cerrarModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="cerrarModal()">✖</span>
+        <img id="modal-img">
+        <p id="modal-desc"></p>
+    </div>
+</div>
+
+    
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
